@@ -1969,50 +1969,28 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   }
 
 /* экран 08 */
-#экран-08 .разворот-лица { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.35fr);
-    align-items: center; }
-  #экран-08 .кадр { position: relative; z-index: 2; margin: 0 -56px 0 0; border-radius: var(--радиус-плитки);
-    box-shadow: var(--тень-плиты); }
-  #экран-08 .кадр .заглушка-картинки { aspect-ratio: 4 / 5; font-size: var(--кегль-лид); font-weight: 700; }
-  #экран-08 .рассказ { display: grid; gap: 18px; padding: clamp(36px, 4.5vw, 64px) clamp(28px, 4vw, 56px)
-    clamp(36px, 4.5vw, 64px) clamp(56px, 8vw, 112px); border-radius: var(--радиус-плитки); }
-  #экран-08 .рассказ h2 { margin: 0; }
-  #экран-08 .стикер { margin-bottom: 4px; font-size: var(--кегль-текст); }
-  #экран-08 .имя { margin: 0; font-weight: 800; font-size: var(--кегль-лид); letter-spacing: .01em;
-    padding-left: 14px; border-left: 4px solid var(--цвет-тёплый); }
+#экран-08 .стикер { margin-bottom: 4px; font-size: var(--кегль-текст); }
   #экран-08 .рассказ > p:not(.стикер):not(.имя) { margin: 0; font-size: var(--кегль-лид); line-height: 1.55; }
-  #экран-08 .рядом { display: flex; gap: 16px; align-items: flex-start; margin-top: 8px;
-    padding: 20px 22px; border-radius: var(--радиус-карточки); }
-  #экран-08 .рядом .иконка { flex: none; width: 30px; height: 30px; }
-  #экран-08 .рядом p { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
-
-  #экран-08.светлый .рассказ, #экран-08.тёмный .рассказ { background: var(--цвет-акцент); box-shadow: var(--тень-плиты); }
-  #экран-08.светлый .рассказ h2, #экран-08.тёмный .рассказ h2 { color: var(--цвет-на-акценте); }
-  #экран-08.светлый .рассказ > p, #экран-08.тёмный .рассказ > p { color: color-mix(in srgb, var(--цвет-на-акценте) 92%, transparent); }
-  #экран-08.светлый .рассказ .имя, #экран-08.тёмный .рассказ .имя { color: var(--цвет-на-акценте); }
+  #экран-08 .шапка-лекторов { max-width: 760px; margin-bottom: calc(var(--отступ-блока) * 1.6); }
+  #экран-08 .шапка-лекторов h2 { margin: .5em 0 0; }
+  #экран-08 .лекторы { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(var(--отступ-блока) * 1.2); }
+  #экран-08 .лектор { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); overflow: hidden; border-radius: var(--радиус-плитки); box-shadow: var(--тень-глубокая); }
+  #экран-08 .лектор__фото { margin: 0; min-height: 100%; }
+  #экран-08 .лектор__фото img { display: block; width: 100%; height: 100%; min-height: 320px; object-fit: cover; object-position: 50% 20%; }
+  #экран-08 .лектор__текст { padding: calc(var(--отступ-блока) * 1.3); display: flex; flex-direction: column; gap: .5em; }
+  #экран-08 .лектор__текст p { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-08 .лектор__текст .имя { margin: 0; font-weight: 800; font-size: var(--кегль-цифра); line-height: 1.2; }
+  #экран-08 .лектор__текст .должность { font-weight: 700; margin-bottom: .6em; }
+  #экран-08.светлый .лектор, #экран-08.тёмный .лектор { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+  #экран-08.светлый .лектор + .лектор, #экран-08.тёмный .лектор + .лектор { background: var(--цвет-тёмный-фон-2); color: var(--цвет-тёмный-текст); }
+  #экран-08.светлый .лектор .должность, #экран-08.тёмный .лектор .должность { color: var(--цвет-тёплый-мягкий); }
+  #экран-08.светлый .лектор__текст p:not(.имя):not(.должность), #экран-08.тёмный .лектор__текст p:not(.имя):not(.должность) { color: color-mix(in srgb, currentColor 90%, transparent); }
   #экран-08.светлый .стикер, #экран-08.тёмный .стикер { background: var(--цвет-тёмный-фон); color: var(--цвет-тёмный-текст); }
-  #экран-08.светлый .рядом, #экран-08.тёмный .рядом { background: var(--цвет-тёплый); }
-  #экран-08.светлый .рядом p, #экран-08.светлый .рядом .иконка,
-  #экран-08.тёмный .рядом p, #экран-08.тёмный .рядом .иконка { color: var(--цвет-тёмный-фон); }
-
-  #экран-08.светлый .кадр .заглушка-картинки { background: var(--цвет-тёмный-фон-2);
-    color: color-mix(in srgb, var(--цвет-тёмный-текст) 70%, transparent); }
-  #экран-08.тёмный .кадр .заглушка-картинки { background: var(--цвет-фон-2); color: var(--цвет-текст-мягкий); }
-
   @media (max-width: 899px) {
-    #экран-08 .разворот-лица { grid-template-columns: 1fr; }
-    #экран-08 .кадр { margin: 0 24px -48px; }
-    #экран-08 .кадр .заглушка-картинки { aspect-ratio: 4 / 3; }
-    #экран-08 .рассказ { padding: 76px 22px 28px; }
-    #экран-08 .рядом { padding: 18px; }
+    #экран-08 .лекторы { grid-template-columns: 1fr; }
+    #экран-08 .лектор { grid-template-columns: 1fr; }
+    #экран-08 .лектор__фото img { aspect-ratio: 1 / 1; height: auto; min-height: 0; }
   }
-  #экран-08 .лекторы { display: grid; gap: var(--отступ-блока); margin-top: var(--отступ-блока); }
-  #экран-08 .лектор { padding-top: var(--отступ-блока); border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent); }
-  #экран-08 .лектор:first-child { padding-top: 0; border-top: 0; }
-  #экран-08 .лектор p { margin: 0; }
-  #экран-08 .лектор .имя { margin-bottom: .5em; }
-  #экран-08 .лектор p:not(.имя) { font-size: var(--кегль-лид); line-height: 1.55; }
-  #экран-08.светлый .лектор p:not(.имя), #экран-08.тёмный .лектор p:not(.имя) { color: color-mix(in srgb, var(--цвет-на-акценте) 92%, transparent); }
 
 /* экран 09 */
 #экран-09 .шапка-вразбивку { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
