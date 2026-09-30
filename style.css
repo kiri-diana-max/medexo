@@ -2006,6 +2006,13 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-08 .рассказ { padding: 76px 22px 28px; }
     #экран-08 .рядом { padding: 18px; }
   }
+  #экран-08 .лекторы { display: grid; gap: var(--отступ-блока); margin-top: var(--отступ-блока); }
+  #экран-08 .лектор { padding-top: var(--отступ-блока); border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent); }
+  #экран-08 .лектор:first-child { padding-top: 0; border-top: 0; }
+  #экран-08 .лектор p { margin: 0; }
+  #экран-08 .лектор .имя { margin-bottom: .5em; }
+  #экран-08 .лектор p:not(.имя) { font-size: var(--кегль-лид); line-height: 1.55; }
+  #экран-08.светлый .лектор p:not(.имя), #экран-08.тёмный .лектор p:not(.имя) { color: color-mix(in srgb, var(--цвет-на-акценте) 92%, transparent); }
 
 /* экран 09 */
 #экран-09 .шапка-вразбивку { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
