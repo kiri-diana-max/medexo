@@ -1805,7 +1805,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04.светлый .лист p span { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
   #экран-04.светлый .лист .номер { color: var(--цвет-тёплый); }
 
-  #экран-04 .итог { position: sticky; top: 96px; gap: 16px; padding: clamp(26px, 3vw, 40px);
+  #экран-04 .итог { gap: 16px; padding: clamp(26px, 3vw, 40px);
     border-radius: var(--радиус-плитки); }
   #экран-04 .итог b { font-size: var(--кегль-h2); line-height: 1.12; letter-spacing: -0.01em; }
   #экран-04 .итог p { font-size: var(--кегль-текст); line-height: 1.5; padding-top: 16px; border-top: 1px solid; }
@@ -1821,6 +1821,10 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04 .лист li { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 18px 0; }
     #экран-04 .итог { position: static; }
   }
+  #экран-04 .правая-колонка { display: grid; gap: calc(var(--отступ-блока) * 1.2); align-content: start; position: sticky; top: 96px; }
+  #экран-04 .кадр-кп { margin: 0; overflow: hidden; border-radius: var(--радиус-плитки); box-shadow: var(--тень-плиты); }
+  #экран-04 .кадр-кп img { display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 45%; }
+  @media (max-width: 899px) { #экран-04 .правая-колонка { position: static; } }
 
 /* экран 05 */
 #экран-05 .шапка-центр { text-align: center; max-width: 760px; margin: 0 auto clamp(36px, 4.5vw, 64px); }
